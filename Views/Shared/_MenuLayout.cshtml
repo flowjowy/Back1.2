@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-3">
+        <p><strong>Left menu</strong></p>
+        <ul>
+            <li>
+                Menu item 1
+            </li>
+            <li>
+                Menu item 2
+            </li>
+            <li>
+                Menu item 3
+            </li>
+        </ul>
+    </div>
+    <div class="col-9">
+        @RenderBody()
+    </div>
+</div>
+
+@RenderSection("scripts", required: false)

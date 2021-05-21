@@ -1,0 +1,27 @@
+﻿@model WebApplication1.Models.CollectionViewModel
+
+@{
+    ViewData["Title"] = "Collection";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Collection</h1>
+
+<div>
+    <h4>CollectionViewModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CollectionInfo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CollectionInfo)
+        </dd>
+    </dl>
+    <div>
+        @foreach(var element in Model.Elements)
+            {
+            await Html.RenderPartialAsync("CollectionElement", element);
+            }
+    </div>
+</div>
